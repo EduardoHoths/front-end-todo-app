@@ -1,0 +1,33 @@
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    h2{
+        margin-bottom: 1rem;
+    }
+    form{
+        width: 90%;
+    }
+}
+
+.hide{
+    display: none;
+}

@@ -1,0 +1,79 @@
+@import "./Variables.scss";
+
+main.main-form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+}
+section.form {
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        all: unset;
+        padding: 10px 20px;
+        width: calc(100% - 40px);
+        background-color: #ccc;
+        margin-top: 30px;
+        border: 1px solid transparent;
+        &:focus {
+            border-color: #8b0cb8;
+        }
+    }
+}
+.form-error {
+    line-height: 20px;
+    margin-bottom: -20px;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #ed1b24;
+    font-weight: bold;
+}
+.response-error{
+    @extend .form-error;
+    margin-top: 20px;
+    
+}
+.submitButton {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    background-color: $secondary-color;
+    text-align: center;
+    border-radius: 8px;
+    color: $primary-color;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 13px 0;
+
+}
+a {
+    text-decoration: none;
+    color: #8b0cb8;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.response-success{
+    @extend .form-error;
+    margin-top: 20px;
+    color: #4caf50;
+}
+ 

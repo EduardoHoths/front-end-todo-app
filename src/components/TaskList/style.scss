@@ -1,0 +1,62 @@
+@import '../../styles/Variables.scss';
+
+.taskList{
+    max-width: 25rem;
+    
+    margin: 0 auto;
+    height: 45vh;
+    overflow-y: auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+
+    .details {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        h4{
+            font-size: 1.2rem;
+        }
+        input[type="checkbox"]:checked ~ h4{
+            text-decoration: line-through 3px solid;
+        }
+    }
+
+    .actions {
+        display: flex;
+        gap: 1rem;
+        transition: 0.5s;
+
+        .edit, .delete{
+            padding: 5px;
+            font-size: 2rem;
+            font-weight: lighter;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+        .edit{
+           background-color: $primary-color;
+           color: white;
+
+           &:hover{
+                background-color: #000;
+           }
+        }
+        .delete{
+            background-color: #ff6666;
+            
+            &:hover{
+                background-color: #ff0000;
+            }
+            
+        }
+    }
+}
